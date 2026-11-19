@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Savetronik</title>
+  <meta name="description" content="Contactez l'association Savetronik à Provin : demande de diagnostic, don de matériel, bénévolat ou partenariat. Accueil sur rendez-vous uniquement.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+:root{--radius-l: 12px; --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4); --transition-fast: 150ms ease; --color-border-hover: #484f58; --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35); --fs-2xl: 1.5rem; --lh-tight: 1.15; --fs-base: 1rem; --lh-code: 1.6; --font-ui: 'Atkinson Hyperlegible', sans-serif; --lh-relaxed: 1.75; --measure: 70ch; --radius-m: 8px; --color-success-bg: #11371d; --color-success: #3fb950; --transition-normal: 250ms ease;}
+.contact-section{padding: var(--space-xxxl) 0;}
+.contact-grid{display: grid; gap: var(--space-xxl);}
+@media (min-width: 900px){.contact-grid{grid-template-columns: 1fr 1fr; align-items: start;}}
+.contact-card{background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-l);
+      padding: var(--space-xl); box-shadow: var(--shadow-sm); transition: border-color var(--transition-fast), box-shadow var(--transition-fast);}
+.contact-card:hover{border-color: var(--color-border-hover); box-shadow: var(--shadow-md);}
+.contact-card h2{font-family: var(--font-title); font-size: var(--fs-2xl); font-weight: 700; line-height: var(--lh-tight);
+      color: var(--color-text); margin: 0 0 var(--space-l); text-wrap: balance;}
+.contact-card address{font-style: normal; font-family: var(--font-mono); font-size: var(--fs-base); line-height: var(--lh-code);
+      color: var(--color-text-muted); margin-bottom: var(--space-l);}
+.contact-card address br{display: block; content: ""; margin-bottom: var(--space-xs);}
+.contact-card p{font-family: var(--font-ui); font-size: var(--fs-base); line-height: var(--lh-relaxed); color: var(--color-text-muted); margin: 0 0 var(--space-m); max-width: var(--measure); text-wrap: pretty;}
+.contact-card p:last-child{margin-bottom: 0;}
+.contact-card strong{color: var(--color-text); font-weight: 700;}
+.contact-form .section-title{margin: 0 0 var(--space-xl);}
+.form-grid{display: grid; gap: var(--space-m);}
+@media (min-width: 600px){.form-grid{grid-template-columns: 1fr 1fr;}}
+.form-grid .field.full-width{grid-column: 1 / -1;}
+.form-actions{display: flex; gap: var(--space-m); margin-top: var(--space-m); flex-wrap: wrap;}
+.btn-secondary{background: transparent; color: var(--color-block); border-color: var(--color-block);}
+.btn-secondary:hover:not(:disabled){background: var(--color-block); color: var(--color-bg);}
+.btn-secondary:focus-visible{box-shadow: 0 0 0 3px rgba(0, 217, 165, 0.4);}
+#confirmation{display: none; margin-top: var(--space-l); padding: var(--space-l); border-radius: var(--radius-m); font-family: var(--font-ui); font-size: var(--fs-base); line-height: var(--lh-relaxed); text-wrap: pretty;}
+#confirmation.success{display: block; background: var(--color-success-bg); color: var(--color-success); border: 1px solid var(--color-success);
+      animation: fadeInUp var(--transition-normal) ease forwards;}
+@keyframes fadeInUp{ from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo" aria-label="Savetronik - Accueil">Savetronik</a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="avantages.html">Avantages</a></li>
+          <li><a href="atelier.html">Atelier & dons</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-text-block">
+        <h1 id="hero-title">Nous contacter</h1>
+        <p class="hero-subtitle">Association Savetronik, 50 rue Camille Desmoulins, 59185 Provin</p>
+        <p class="hero-subtitle" style="margin-top: var(--space-s); font-size: 0.9rem; opacity: 0.7;">Accueil à l'atelier uniquement sur rendez-vous.</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="hero-svg" viewBox="0 0 400 300" role="img" aria-label="Icône d'enveloppe stylisée sur fond de circuit imprimé.">
+          <path class="circuit-path" d="M 20 150 H 380" />
+          <path class="circuit-path" d="M 200 20 V 280" />
+          <path class="circuit-path" d="M 120 80 L 200 130 L 280 80 L 280 200 L 120 200 Z" fill="none" stroke-width="2" />
+          <path class="circuit-path" d="M 120 80 L 200 130 L 280 80" fill="none" stroke-width="2" />
+        </svg>
+      </div>
+    </section>
+
+    <section class="contact-section container" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div class="contact-card contact-info">
+          <h2 id="contact-title">Coordonnées</h2>
+          <address>
+            Association Savetronik<br>
+            50 rue Camille Desmoulins<br>
+            59185 Provin<br>
+            France
+          </address>
+          <p>Territoire d'intervention : Provin, Bauvin, secteur des Weppes, Métropole Européenne de Lille (MEL).</p>
+          <p>Fonctionnement : L'atelier vous accueille uniquement sur rendez-vous, obtenu via le formulaire ci-contre ou par courrier.</p>
+          <p>Statut : Association loi 1901.</p>
+        </div>
+
+        <div class="contact-card contact-form">
+          <h2 class="section-title">Formulaire de demande</h2>
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Nom <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Votre nom complet">
+                <span class="error-msg" id="name-error">Veuillez indiquer votre nom.</span>
+              </div>
+              <div class="field">
+                <label for="email">Adresse e-mail <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="vous@exemple.fr">
+                <span class="error-msg" id="email-error">Veuillez indiquer une adresse e-mail valide.</span>
+              </div>
+              <div class="field full-width">
+                <label for="subject">Objet de la demande <span aria-hidden="true">*</span></label>
+                <select id="subject" name="subject" required>
+                  <option value="">— Choisir un sujet —</option>
+                  <option value="repair">Réparation d'un appareil</option>
+                  <option value="donation">Don de matériel</option>
+                  <option value="volunteering">Bénévolat</option>
+                  <option value="partnership">Partenariat</option>
+                  <option value="other">Autre</option>
+                </select>
+                <span class="error-msg" id="subject-error">Veuillez sélectionner un objet.</span>
+              </div>
+              <div class="field full-width">
+                <label for="device">Modèle de l'appareil concerné</label>
+                <input type="text" id="device" name="device" autocomplete="off" placeholder="Ex: iPhone 12, PS5, ThinkPad X1 Carbon, carte mère ASUS...">
+                <span class="error-msg" id="device-error"></span>
+              </div>
+              <div class="field full-width">
+                <label for="message">Description du problème ou du projet <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required placeholder="Décrivez la panne, le projet de modding, le matériel à donner, vos motivations..."></textarea>
+                <span class="error-msg" id="message-error">Veuillez décrire votre demande.</span>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+              <button type="reset" class="btn btn-secondary">Effacer</button>
+            </div>
+            <div id="confirmation" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <span class="font-mono">Association Savetronik</span>
+        <address>
+          50 rue Camille Desmoulins<br>
+          59185 Provin
+        </address>
+        <p>Déclarée en septembre 2026 — Loi 1901</p>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="avantages.html">Avantages</a></li>
+          <li><a href="atelier.html">Atelier & dons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-territory">
+        <p>Territoire : Provin, Bauvin, Weppes, MEL</p>
+        <p>Accueil sur rendez-vous uniquement</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const form = document.getElementById('contact-form');
+      const confirmation = document.getElementById('confirmation');
+      const fields = {
+        name: document.getElementById('name'),
+        email: document.getElementById('email'),
+        subject: document.getElementById('subject'),
+        device: document.getElementById('device'),
+        message: document.getElementById('message')
+      };
+      const errors = {
+        name: document.getElementById('name-error'),
+        email: document.getElementById('email-error'),
+        subject: document.getElementById('subject-error'),
+        device: document.getElementById('device-error'),
+        message: document.getElementById('message-error')
+      };
+
+      function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      function showError(fieldName, show) {
+        const input = fields[fieldName];
+        const errorEl = errors[fieldName];
+        if (!input || !errorEl) return;
+        if (show) {
+          input.setAttribute('aria-invalid', 'true');
+          errorEl.style.display = 'block';
+        } else {
+          input.removeAttribute('aria-invalid');
+          errorEl.style.display = 'none';
+        }
+      }
+
+      function validateField(fieldName) {
+        const input = fields[fieldName];
+        if (!input) return true;
+        const value = input.value.trim();
+        let valid = true;
+        if (input.hasAttribute('required') && value === '') {
+          valid = false;
+        } else if (fieldName === 'email' && value !== '' && !validateEmail(value)) {
+          valid = false;
+        }
+        showError(fieldName, !valid);
+        return valid;
+      }
+
+      Object.keys(fields).forEach(key => {
+        const input = fields[key];
+        if (input) {
+          input.addEventListener('blur', () => validateField(key));
+          input.addEventListener('input', () => {
+            if (input.getAttribute('aria-invalid') === 'true') validateField(key);
+          });
+        }
+      });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        confirmation.textContent = '';
+        confirmation.style.display = 'none';
+        confirmation.className = '';
+
+        let allValid = true;
+        Object.keys(fields).forEach(key => {
+          if (!validateField(key)) allValid = false;
+        });
+
+        if (!allValid) {
+          const firstInvalid = form.querySelector('[aria-invalid="true"]');
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours...';
+
+        // Simulate network request
+        await new Promise(r => setTimeout(r, 1000));
+
+        // Success handling
+        confirmation.textContent = 'Votre demande a bien été envoyée. Nous vous répondrons rapidement à l\'adresse indiquée.';
+        confirmation.style.display = 'block';
+        confirmation.className = 'success';
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer la demande';
+
+        // Scroll to confirmation
+        confirmation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+
+      form.addEventListener('reset', () => {
+        Object.keys(fields).forEach(key => showError(key, false));
+        confirmation.textContent = '';
+        confirmation.style.display = 'none';
+      });
+    })();
+  </script>
+</body>
+</html>

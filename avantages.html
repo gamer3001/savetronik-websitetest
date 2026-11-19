@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avantages — Savetronik</title>
+  <meta name="description" content="Pourquoi choisir l'association Savetronik pour réparer votre électronique ? Réparation au composant, modèle non lucratif, ancrage local, diagnostic transparent.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+:root{--color-success: #2d7d2d;}
+button:focus-visible{outline: 2px solid var(--color-focus); outline-offset: 2px; border-radius: 2px; border-bottom-color: transparent;}
+.page-hero{background: var(--color-block); color: var(--color-text-on-block); padding: var(--space-xxxl) var(--space-l); text-align: center;}
+.page-hero .container{max-width: 800px;}
+.page-hero h1{font-family: var(--font-title); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: var(--space-m); text-wrap: balance;}
+.page-hero p{font-family: var(--font-mono); font-size: 1rem; line-height: 1.7; opacity: 0.85; max-width: var(--line-width); margin: 0 auto; text-wrap: pretty;}
+.avantages-section{padding: var(--space-xxxl) 0;}
+.avantages-section .section-title{font-family: var(--font-title); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.2; margin-bottom: var(--space-xl); text-wrap: balance; color: var(--color-text);}
+.avantages-list{display: grid; gap: var(--space-xl); border-top: 1px solid var(--color-border); padding-top: var(--space-xl);}
+@media (min-width: 768px){.avantages-list{grid-template-columns: 1fr 1fr;}}
+@media (min-width: 1024px){.avantages-list{grid-template-columns: repeat(2, 1fr);}}
+.avantage-item{display: grid; gap: var(--space-s); padding-bottom: var(--space-xl); border-bottom: 1px solid var(--color-border);}
+.avantage-item:last-child{border-bottom: none; padding-bottom: 0;}
+@media (min-width: 768px){.avantage-item{grid-template-columns: max-content 1fr; align-items: start; gap: var(--space-l) var(--space-xl); padding-bottom: 0; border-bottom: none; border-right: 1px solid var(--color-border); padding-right: var(--space-xl);}
+.avantage-item:nth-child(2n){border-right: none; padding-right: 0;}}
+.avantage-term{font-family: var(--font-title); font-size: 1.125rem; font-weight: 700; line-height: 1.3; color: var(--color-text); text-wrap: balance;}
+.avantage-def{font-family: var(--font-body); font-size: 0.95rem; line-height: 1.7; color: var(--color-text); opacity: 0.85; max-width: var(--line-width); text-wrap: pretty;}
+.comparatif-section{background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: var(--space-xxxl) 0;}
+.comparatif-section .section-title{font-family: var(--font-title); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.2; margin-bottom: var(--space-xl); text-wrap: balance; color: var(--color-text);}
+.comparatif-table-wrapper{overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 calc(-1 * var(--space-l)); padding: 0 var(--space-l);}
+.comparatif-table{width: 100%; min-width: 600px; border-collapse: collapse; font-size: 0.95rem; line-height: 1.6; font-family: var(--font-body);}
+.comparatif-table caption{font-family: var(--font-title); font-size: clamp(1.125rem, 2.5vw, 1.375rem); font-weight: 700; text-align: left; margin-bottom: var(--space-l); color: var(--color-text); caption-side: top;}
+.comparatif-table th,
+.comparatif-table td{padding: var(--space-m) var(--space-l); border-bottom: 1px solid var(--color-border); text-align: left; vertical-align: top;}
+.comparatif-table thead th{background: var(--color-block); color: var(--color-text-on-block); font-family: var(--font-title); font-weight: 700; font-size: 1rem; white-space: nowrap;}
+.comparatif-table tbody th{font-family: var(--font-mono); font-weight: 400; font-size: 0.9rem; color: var(--color-block); background: var(--color-bg); width: 200px; min-width: 200px;}
+.comparatif-table td{color: var(--color-text);}
+.comparatif-table tbody tr:last-child td,
+.comparatif-table tbody tr:last-child th{border-bottom: none;}
+.comparatif-table tbody tr:nth-child(even) td,
+.comparatif-table tbody tr:nth-child(even) th{background: rgb(0 0 0 / 0.02);}
+.comparatif-table .check{color: var(--color-success); font-weight: 700;}
+.comparatif-table .cross{color: var(--color-text-muted); opacity: 0.6;}
+.cta-section{background: var(--color-block); color: var(--color-text-on-block); padding: var(--space-xxxl) var(--space-l); text-align: center;}
+.cta-section .container{max-width: 700px;}
+.cta-section h2{font-family: var(--font-title); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.2; margin-bottom: var(--space-m); text-wrap: balance;}
+.cta-section p{opacity: 0.9; line-height: 1.7; margin-bottom: var(--space-xl); max-width: var(--line-width); margin-left: auto; margin-right: auto; text-wrap: pretty;}
+.cta-section .btn{--btn-bg: var(--color-accent); --btn-hover: color-mix(in srgb, var(--color-accent) 85%, black); --btn-focus-ring: var(--color-text-on-block);}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo" aria-label="Savetronik - Accueil">Savetronik</a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="avantages.html" aria-current="page">Avantages</a></li>
+          <li><a href="atelier.html">Atelier & dons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Pourquoi choisir Savetronik ?</h1>
+        <p>Quatre piliers qui différencient notre approche associative de la réparation électronique du remplacement neuf ou des circuits SAV classiques.</p>
+      </div>
+    </section>
+
+    <section class="avantages-section container" aria-labelledby="avantages-title">
+      <h2 id="avantages-title" class="section-title">Les avantages du modèle associatif</h2>
+      <div class="avantages-list">
+        <article class="avantage-item">
+          <h3 class="avantage-term">Réparation au composant, pas au module</h3>
+          <p class="avantage-def">Nous identifions et remplaçons le seul composant défaillant (condensateur, MOSFET, BGA, microcontrôleur) au lieu d'échanger une carte mère complète. Cela réduit drastiquement le coût et les déchets électroniques.</p>
+        </article>
+        <article class="avantage-item">
+          <h3 class="avantage-term">Modèle non lucratif, prix cohérent</h3>
+          <p class="avantage-def">Association loi 1901 sans but lucratif : la main-d'œuvre n'est pas surfacturée pour générer du profit. Le tarif reflète le temps réel passé et le coût des pièces, rendant la réparation économiquement viable face au neuf.</p>
+        </article>
+        <article class="avantage-item">
+          <h3 class="avantage-term">Ancrage local, circuit court</h3>
+          <p class="avantage-def">Atelier basé à Provin, intervention sur les Weppes et la MEL. Pas d'envoi en centre de tri lointain, pas de transport superflu. Le matériel reste sur le territoire, le lien humain est direct.</p>
+        </article>
+        <article class="avantage-item">
+          <h3 class="avantage-term">Diagnostic transparent et partagé</h3>
+          <p class="avantage-def">Avant toute intervention, nous expliquons la panne, la solution technique, le coût estimé et les alternatives. Vous décidez en toute connaissance de cause, sans pression commerciale.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="comparatif-section container" aria-labelledby="comparatif-title">
+      <h2 id="comparatif-title" class="section-title">Comparatif rapide</h2>
+      <div class="comparatif-table-wrapper">
+        <table class="comparatif-table">
+          <caption>Savetronik vs Rachat neuf vs SAV constructeur</caption>
+          <thead>
+            <tr>
+              <th scope="col">Critère</th>
+              <th scope="col">Savetronik (Associatif)</th>
+              <th scope="col">Rachat neuf</th>
+              <th scope="col">SAV Constructeur (Hors garantie)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Cible de la réparation</th>
+              <td>Composant défaillant uniquement</td>
+              <td><span class="cross">Remplacement total</span></td>
+              <td>Souvent échange standard carte mère</td>
+            </tr>
+            <tr>
+              <th scope="row">Coût relatif</th>
+              <td><span class="check">Faible (pièces + temps réel)</span></td>
+              <td>Élevé (prix public neuf)</td>
+              <td>Élevé (forfait + main d'œuvre certifiée)</td>
+            </tr>
+            <tr>
+              <th scope="row">Déchets générés</th>
+              <td><span class="check">Minimes (quelques grammes)</span></td>
+              <td>Appareil complet + emballage</td>
+              <td>Carte mère complète + logistique</td>
+            </tr>
+            <tr>
+              <th scope="row">Délai</th>
+              <td>Quelques jours (selon disponibilité des pièces)</td>
+              <td>Immédiat (livraison)</td>
+              <td>Semaines (aller/retour centre)</td>
+            </tr>
+            <tr>
+              <th scope="row">Données utilisateur</th>
+              <td><span class="check">Préservées (réparation in-situ)</span></td>
+              <td>Perdues (nouvel appareil)</td>
+              <td>Souvent effacées (procédure standard)</td>
+            </tr>
+            <tr>
+              <th scope="row">Transparence</th>
+              <td><span class="check">Diagnostic expliqué, validation client</span></td>
+              <td>N/A</td>
+              <td>Devis souvent opaque, forfait imposé</td>
+            </tr>
+            <tr>
+              <th scope="row">Impact local</th>
+              <td><span class="check">Emploi/Compétences sur le territoire</span></td>
+              <td>Zéro (importation)</td>
+              <td>Zéro (centre centralisé)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Prêt à donner une seconde vie à votre appareil ?</h2>
+        <p>Contactez-nous pour un diagnostic gratuit et sans engagement. Nous évaluons la faisabilité et le coût avant toute intervention.</p>
+        <a href="contact.html" class="btn">Demander un diagnostic</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <span class="font-mono">Association Savetronik</span>
+        <address>
+          50 rue Camille Desmoulins<br>
+          59185 Provin
+        </address>
+        <p>Déclarée en septembre 2026 — Loi 1901</p>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="avantages.html">Avantages</a></li>
+          <li><a href="atelier.html">Atelier & dons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-territory">
+        <p>Territoire : Provin, Bauvin, Weppes, MEL</p>
+        <p>Accueil sur rendez-vous uniquement</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

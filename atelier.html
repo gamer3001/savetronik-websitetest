@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier & dons — Savetronik</title>
+  <meta name="description" content="Participez à la vie de l'association Savetronik : dons de matériel, bénévolat, partenariats locaux. Atelier à Provin (MEL).">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+.atelier-hero{background: var(--color-block);
+      color: var(--color-text-on-block);
+      padding: var(--space-xxxl) var(--space-l);
+      text-align: center;}
+.atelier-hero .container{max-width: 800px; margin: 0 auto;}
+.atelier-hero h1{font-family: var(--font-title);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: var(--space-m);
+      text-wrap: balance;
+      letter-spacing: -0.02em;}
+.atelier-hero .lead{font-family: var(--font-body);
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      line-height: 1.7;
+      opacity: 0.9;
+      max-width: 65ch;
+      margin: 0 auto var(--space-xl);
+      text-wrap: pretty;}
+.modalites{padding: var(--space-xxxl) var(--space-l);}
+.modalites .container{max-width: 1200px; margin: 0 auto;}
+.modalites-list{border-top: 1px solid var(--color-border);}
+.modalite-row{display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-m);
+      padding: var(--space-l) 0;
+      border-bottom: 1px solid var(--color-border);
+      align-items: start;}
+@media (min-width: 768px){.modalite-row{grid-template-columns: 200px 1fr auto; align-items: center;}}
+.modalite-title{font-family: var(--font-title);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.3;}
+.modalite-desc{font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--color-text-muted);
+      max-width: var(--line-width);}
+.modalite-action .btn{font-size: 0.875rem; padding: var(--space-xs) var(--space-l); white-space: nowrap;}
+@media (max-width: 767px){.modalite-action{margin-top: var(--space-s);}}
+.horaires{padding: var(--space-xxxl) var(--space-l);
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);}
+.horaires .container{max-width: 700px; margin: 0 auto;}
+.horaires h2{font-family: var(--font-title);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: var(--space-l);
+      text-align: center;
+      text-wrap: balance;
+      color: var(--color-text);
+      letter-spacing: -0.01em;}
+.horaires-list{display: flex; flex-direction: column; gap: var(--space-m);}
+.horaire-row{display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-m);
+      padding: var(--space-l);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      text-align: left;}
+@media (min-width: 600px){.horaire-row{grid-template-columns: 140px 1fr; text-align: left;}}
+.horaire-day{font-family: var(--font-title);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      white-space: nowrap;}
+.horaire-details{font-family: var(--font-body);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-text-muted);}
+.horaire-details strong{color: var(--color-text); font-weight: 700; display: block; margin-bottom: var(--space-xs);}
+.cta-bandeau{background: var(--color-block);
+      color: var(--color-text-on-block);
+      padding: var(--space-xxxl) var(--space-l);
+      text-align: center;}
+.cta-bandeau .container{max-width: 700px; margin: 0 auto;}
+.cta-bandeau h2{font-family: var(--font-title);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-bottom: var(--space-m);
+      text-wrap: balance;
+      letter-spacing: -0.01em;}
+.cta-bandeau p{font-family: var(--font-body);
+      opacity: 0.9;
+      line-height: 1.7;
+      margin-bottom: var(--space-xl);
+      text-wrap: pretty;
+      max-width: 65ch;
+      margin-left: auto;
+      margin-right: auto;}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo" aria-label="Savetronik - Accueil">Savetronik</a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="avantages.html">Avantages</a></li>
+          <li><a href="atelier.html" aria-current="page">Atelier & dons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="atelier-hero" aria-labelledby="atelier-title">
+      <div class="container">
+        <h1 id="atelier-title">Atelier & dons</h1>
+        <p class="lead">L'association vit grâce à la participation de toutes et tous. Trois façons de contribuer au réemploi numérique local, depuis notre atelier à Provin.</p>
+        <a href="contact.html" class="btn btn-primary">Proposer un don ou devenir bénévole</a>
+      </div>
+    </section>
+
+    <section class="modalites container" aria-labelledby="modalites-title">
+      <h2 id="modalites-title" class="section-title">Modalités de participation</h2>
+      <div class="modalites-list">
+        <article class="modalite-row">
+          <h3 class="modalite-title">Dons de matériel</h3>
+          <div class="modalite-desc">
+            <p>Nous collectons vos appareils en panne, anciens ordinateurs, serveurs, consoles, câbles et composants inutilisés pour remise en état ou récupération de pièces détachées.</p>
+            <ul>
+              <li>Ordinateurs portables et fixes (tout état)</li>
+              <li>Serveurs et équipements réseau</li>
+              <li>Consoles de jeu et accessoires</li>
+              <li>Composants, câbles, alimentations</li>
+              <li>Écrans, claviers, souris</li>
+            </ul>
+          </div>
+          <div class="modalite-action"><a href="contact.html" class="btn btn-primary">Proposer du matériel</a></div>
+        </article>
+        <article class="modalite-row">
+          <h3 class="modalite-title">Bénévolat</h3>
+          <div class="modalite-desc">
+            <p>Rejoignez les sessions de diagnostic, de micro-soudure ou de reconditionnement. Aucune compétence préalable n'est requise : la transmission se fait sur place, par la pratique.</p>
+            <ul>
+              <li>Sessions hebdomadaires ouvertes</li>
+              <li>Initiation à la soudure CMS</li>
+              <li>Diagnostic et test de composants</li>
+              <li>Préparation et nettoyage de matériel</li>
+              <li>Documentation et inventaire</li>
+            </ul>
+          </div>
+          <div class="modalite-action"><a href="contact.html" class="btn btn-primary">Devenir bénévole</a></div>
+        </article>
+        <article class="modalite-row">
+          <h3 class="modalite-title">Partenariats locaux</h3>
+          <div class="modalite-desc">
+            <p>Collaboration avec les associations, écoles, structures d'insertion et acteurs publics de la MEL autour du réemploi numérique, de la sensibilisation et de la formation.</p>
+            <ul>
+              <li>Ateliers pédagogiques en milieu scolaire</li>
+              <li>Collectes solidaires avec partenaires</li>
+              <li>Mise à disposition de matériel reconditionné</li>
+              <li>Événements « Repair Café » partagés</li>
+              <li>Conventions avec structures publiques</li>
+            </ul>
+          </div>
+          <div class="modalite-action"><a href="contact.html" class="btn btn-primary">Proposer un partenariat</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="horaires" aria-labelledby="horaires-title">
+      <div class="container">
+        <h2 id="horaires-title">Venir à l'atelier</h2>
+        <div class="horaires-list">
+          <article class="horaire-row">
+            <div class="horaire-day">Sessions régulières</div>
+            <div class="horaire-details"><strong>Diagnostic, soudure, reconditionnement</strong>Plusieurs créneaux par semaine. L'accueil se fait sur rendez-vous pour garantir l'encadrement.</div>
+          </article>
+          <article class="horaire-row">
+            <div class="horaire-day">Dépôt de dons</div>
+            <div class="horaire-details"><strong>Matériel informatique et électronique</strong>Collecte organisée sur créneaux dédiés. Contactez-nous pour convenir d'un passage.</div>
+          </article>
+          <article class="horaire-row">
+            <div class="horaire-day">Sur rendez-vous</div>
+            <div class="horaire-details"><strong>Autres besoins</strong>Visite de l'atelier, rendez-vous partenariat, récupération de matériel. Nous nous adaptons à vos disponibilités.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-bandeau" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Vous voulez participer ?</h2>
+        <p>Déposez du matériel, venez découvrir l'atelier ou proposez un partenariat. Tout se passe sur rendez-vous à Provin.</p>
+        <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <span class="font-mono">Association Savetronik</span>
+        <address>
+          50 rue Camille Desmoulins<br>
+          59185 Provin
+        </address>
+        <p>Déclarée en septembre 2026 — Loi 1901</p>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="avantages.html">Avantages</a></li>
+          <li><a href="atelier.html">Atelier & dons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-territory">
+        <p>Territoire : Provin, Bauvin, Weppes, MEL</p>
+        <p>Accueil sur rendez-vous uniquement</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
